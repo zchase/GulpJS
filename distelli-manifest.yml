@@ -1,0 +1,16 @@
+zchase/gulp:
+
+  PkgInclude:
+    - '*'
+
+  PreRelease:
+    - npm install
+    - gulp jshint
+
+  PreInstall:
+    - sudo apt-get update
+    - sudo apt-get install nodejs -y
+    - sudo apt-get install npm -y
+
+  Exec:
+    - /usr/bin/nodejs app.js
